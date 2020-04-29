@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "393241253118",
+    "firebase_url": "https://flashchat-94e8a.firebaseio.com",
+    "project_id": "flashchat-94e8a",
+    "storage_bucket": "flashchat-94e8a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:393241253118:android:105f903cf8f046e58101af",
+        "android_client_info": {
+          "package_name": "com.actionablecoaching.chat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "393241253118-1v6ttassqgkgpg5srcqsse2noi4gd1ot.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyApXIXnT7xHq53N6aFIflDFZjm62sEWDYA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "393241253118-1v6ttassqgkgpg5srcqsse2noi4gd1ot.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
