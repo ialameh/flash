@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 import '../constants.dart';
@@ -9,6 +10,9 @@ class RegistrationScreen extends StatefulWidget {
 }
 
 class _RegistrationScreenState extends State<RegistrationScreen> {
+  final _auth = FirebaseAuth.instance;
+  String email;
+  String password;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,8 +31,11 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
               height: 48.0,
             ),
             TextField(
+              style: TextStyle(color: Colors.greenAccent),
+              keyboardType: TextInputType.emailAddress,
               onChanged: (value) {
                 //Do something with the user input.
+                email = value;
               },
               decoration:
                   kInputDecoration.copyWith(hintText: 'Enter your email'),
@@ -37,11 +44,14 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
               height: 8.0,
             ),
             TextField(
+              style: TextStyle(color: Colors.greenAccent),
+              obscureText: true,
               onChanged: (value) {
                 //Do something with the user input.
+                password = value;
               },
               decoration:
-                  kInputDecoration.copyWith(hintText: 'Enter your email'),
+                  kInputDecoration.copyWith(hintText: 'Enter your password'),
             ),
             SizedBox(
               height: 24.0,
@@ -55,6 +65,8 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                 child: MaterialButton(
                   onPressed: () {
                     //Implement registration functionality.
+                    print(email);
+                    print(password);
                   },
                   minWidth: 200.0,
                   height: 42.0,
