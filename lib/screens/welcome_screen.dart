@@ -19,7 +19,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>
     super.initState();
     controller = AnimationController(
       vsync: this,
-      duration: Duration(seconds: 5),
+      duration: Duration(seconds: 1),
     );
     animation = CurvedAnimation(parent: controller, curve: Curves.bounceInOut)
       ..addListener(() { 
@@ -30,7 +30,11 @@ class _WelcomeScreenState extends State<WelcomeScreen>
         controller.forward();
 
   }
-
+  @override
+  void dispose() {
+    super.dispose();
+    controller.dispose();
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -52,6 +56,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>
                   style: TextStyle(
                     fontSize: 35.0,
                     fontWeight: FontWeight.w900,
+                    color: Colors.blueGrey,
                   ),
                 ),
               ],
